@@ -1,5 +1,6 @@
+package sesion01;
 // Upper camel case: utilizado para nombrar las clases
-// LOwer camel case: utilizado para nombrar los atributos y metodos de las clases
+// Lower camel case: utilizado para nombrar los atributos y metodos de las clases
 public class quickstart {
 
     private static void greeting(String name) {
