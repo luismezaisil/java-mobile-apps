@@ -1,37 +1,26 @@
-package sesion02;
+import java.util.Scanner;
+
+import modelos.Persona;
 
 public class Main {
+    
     public static void main(String[] args) {
-        /*
-         * Ejemplo de invocacion a un método definido como static
-         */
-        System.out.println(Math.addNumbers(5, 3));
-        Main.createStudents();
-        /*
-        * Se crea un objeto de la clase Example
-         */ 
-        Example example = new Example();
-        example.showMessage();
-    }
+        Persona persona1 = new Persona();
+        persona1.setNombre("Carlos");
+        persona1.setEdad(15);
+        persona1.setDni("72573822");
 
-    public static void createStudents(){
-        /*
-         * Ejemplo de invocacion a un método no definido como static
-         */
-        Student studentCarlos  = new Student();
-        studentCarlos.study();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese una fruta:");
+        String fruta = scanner.next();
+        persona1.comer(fruta);
 
-        studentCarlos.age = 15;
-        studentCarlos.name = "Carlos";
-        studentCarlos.dni = "89434239";
-        studentCarlos.showName();
+        Persona persona2 = new Persona();
+        persona2.setNombre("Ana");
+        persona2.setEdad(20);
+        persona2.setDni("83743393");
+        persona2.dormir();
 
-        Student studentAna = new Student();
-
-        studentAna.age = 21;
-        studentAna.name = "Ana";
-        studentAna.dni = "45678925";
-        studentAna.showName();
-
+        scanner.close();    
     }
 }
